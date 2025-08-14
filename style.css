@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+  --Blue-600: hsl(185, 75%, 39%);
+  --Navy-950: hsl(229, 23%, 23%);
+  --Gray-500: hsl(227, 10%, 46%);
+  --Gray-100: hsl(225, 10%, 92%);
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Blue-600);
+  background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -300px left -300px, bottom -300px right -300px;
+
+  .card {
+    width: 350px;
+    background-color: var(--Gray-100);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    .top-img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-content {
+      position: relative;
+      padding: 60px 20px 20px; 
+
+      .profile-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .profile-img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border: 5px solid white;
+          position: absolute;
+          top: -50px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .name {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          h1 {
+            font-size: 1.2rem;
+            color: var(--Navy-950);
+          }
+
+          #age {
+            font-size: 1.2rem;
+            color: var(--Gray-500);
+          }
+        }
+
+        #london {
+          font-size: 0.9rem;
+          color: var(--Gray-500);
+        }
+      }
+
+      .foot {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid var(--Gray-100);
+        margin-top: 20px;
+        padding-top: 20px;
+
+        .item {
+          h2 {
+            font-size: 1rem;
+            color: var(--Navy-950);
+          }
+
+          p {
+            font-size: 0.8rem;
+            color: var(--Gray-500);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+}
